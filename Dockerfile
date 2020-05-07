@@ -8,6 +8,6 @@ RUN mkdir software && \
     dnf -y install maven && \
     dnf clean all	
 ADD apache-tomcat-8.5.51.tar.gz /root/software/
-COPY jenkins.war /root/software/apache-tomcat-8.5.51/webapps/jenkins.war
+#COPY jenkins.war /root/software/apache-tomcat-8.5.51/webapps/jenkins.war
 EXPOSE 80
 CMD ["/root/software/apache-tomcat-8.5.51/bin/catalina.sh", "run"]
